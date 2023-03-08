@@ -38,7 +38,7 @@
   First Name:<br>
   <input type="text" name="entry.2005620554" id="entry.2005620554"><br>
   Last Name:<br>
-  <input type="text" name="entry.172060885" id="entry.172060885">
+  <input type="text" name="entry.172060885" id="entry.172060885"><br>
   Email:<br>
   <input type="text" name="entry.1045781291" id="entry.1045781291"><br>
   Comments:<br>
@@ -46,47 +46,43 @@
   <input type="submit" value="Submit">
 </form>
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-
-<script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Thank you! Your submission has been processed.');
-  });
-</script>
-
 <div class="fcf-body">
 
     <div id="fcf-form">
     <h3 class="fcf-h3">Contact us</h3>
 
-    <form id="fcf-form-id" class="fcf-form-class" method="post" action="php/contact-form-process.php">
+    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfOjWXB6b5_1KJoKubNOHVZEzmQhgtv1KPpA_oq91HayScFxQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
         
         <div class="fcf-form-group">
-            <label for="Name" class="fcf-label">Your name</label>
+            <label for="First Name" class="fcf-label">Your name</label>
             <div class="fcf-input-group">
-                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                <input type="text" name="entry.2005620554" id="entry.2005620554" class="fcf-form-control" required>
+            </div>
+        </div>
+        
+        <div class="fcf-form-group">
+            <label for="Last Name" class="fcf-label">Your name</label>
+            <div class="fcf-input-group">
+                <input type="text" name="entry.172060885" id="entry.172060885" class="fcf-form-control" required>
             </div>
         </div>
 
         <div class="fcf-form-group">
             <label for="Email" class="fcf-label">Your email address</label>
             <div class="fcf-input-group">
-                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                <input type="email" name="entry.1045781291" id="entry.1045781291" class="fcf-form-control" required>
             </div>
         </div>
 
         <div class="fcf-form-group">
             <label for="Message" class="fcf-label">Your message</label>
             <div class="fcf-input-group">
-                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                <textarea name="entry.839337160" id="entry.839337160" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
             </div>
         </div>
 
         <div class="fcf-form-group">
-            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+            <button type="submit" value="Submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
         </div>
 
         <div class="fcf-credit" id="fcf-credit">
@@ -97,6 +93,17 @@ $('#gform').on('submit', function(e) {
     </div>
 
 </div>
+    
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Thank you! Your submission has been processed.');
+  });
+</script>
 
 </body>
 </html>
